@@ -2,7 +2,7 @@
 dependency_overrides:
   # analyzer: 6.9.0
   # custom_lint: ^0.7.5
-  source_gen: ^2.0.0
+  source_gen: ^4.0.0
   nals_lints:
     path: ../nals_lints
   resources:

@@ -60,15 +60,14 @@ class MissingCallingResponsive extends DartLintRule {
             node.parameters.parameterFragments.forEach((element) {
               if (element?.element.defaultValueCode != null &&
                   _notResponsive(element!.element.defaultValueCode!)) {
-                if (element.element is DefaultFieldFormalParameterElementImpl) {
+                if (element.element is FieldFormalParameterElementImpl) {
                   reporter.atNode(
-                      (element.element
-                              as DefaultFieldFormalParameterElementImpl)
+                      (element.element as FieldFormalParameterElementImpl)
                           .constantInitializer!,
                       code);
-                } else if (element.element is DefaultParameterElementImpl) {
+                } else if (element.element is FormalParameterElementImpl) {
                   reporter.atNode(
-                      (element.element as DefaultParameterElementImpl)
+                      (element.element as FormalParameterElementImpl)
                           .constantInitializer!,
                       code);
                 } else {
